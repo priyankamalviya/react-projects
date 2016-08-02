@@ -23,6 +23,8 @@ class ContactsList extends React.Component {
         this.setState({
             contacts: this.state.contacts.concat({id, name, phone})
         })
+        this.refs.name.value = '';
+        this.refs.phone.value = '';
     }
     render(){
         let filteredContacts = this.state.contacts.filter(
@@ -44,7 +46,7 @@ class ContactsList extends React.Component {
                 <ul>
                     {
                         filteredContacts.map((contact)=> {
-                            return   <Contact contact ={contact} key={contact.id}/>
+                            return   <Contact contact ={contact} item="hello" key={contact.id}/>
                         })
                     }
                 </ul>
