@@ -1,5 +1,6 @@
 import React from 'react';
 import {partial} from '../../lib/utils';
+import PropTypes from 'prop-types'; // ES6
 
 export const TodoItem = (props) => {
   /*This is how you apply a partial function. Null means it knows its content. id is the first item in the function*/
@@ -15,7 +16,7 @@ export const TodoItem = (props) => {
 }
 
 TodoItem.propTypes ={
-  name: React.PropTypes.string.isRequired,
-  isComplete: React.PropTypes.bool,
-  id: React.PropTypes.number.isRequired
+  name: PropTypes.string.isRequired,
+  isComplete: PropTypes.bool,
+  id: PropTypes.number.isRequired
 }
